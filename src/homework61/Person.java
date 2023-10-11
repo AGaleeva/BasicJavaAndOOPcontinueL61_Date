@@ -8,9 +8,15 @@ public class Person implements Comparable<Person> {
     private String name;
     private Date dob;
 
-    public Person(String name, Date dob) {
+    public Person(String name, String dob) throws ParseException {
         this.name = name;
-        this.dob = dob;
+        this.dob = toDate(dob);
+    }
+
+    private Date toDate(String str) throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
+        Date dob = sdf.parse(str);
+        return dob;
     }
 
     public String getName() {

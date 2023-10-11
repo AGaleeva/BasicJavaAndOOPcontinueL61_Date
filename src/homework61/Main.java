@@ -25,10 +25,10 @@ public class Main {
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
         List<Person> personList = new ArrayList<>(List.of(
-                new Person("John Derek", sdf.parse("16.07.1987")),
-                new Person("Emmanuel Simpson", sdf.parse("11.04.1990")),
-                new Person("Ann Smith", sdf.parse("03.01.1993")),
-                new Person("George Wilson", sdf.parse("21.08.1983"))
+                new Person("John Derek", "16.07.1987"),
+                new Person("Emmanuel Simpson", "11.04.1990"),
+                new Person("Ann Smith", "03.01.1993"),
+                new Person("George Wilson", "21.08.1983")
         ));
 
         personList.sort(Person::compareTo);
